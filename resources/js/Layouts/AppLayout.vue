@@ -7,6 +7,7 @@ import Dropdown from '@/Components/Dropdown.vue';
 import DropdownLink from '@/Components/DropdownLink.vue';
 import NavLink from '@/Components/NavLink.vue';
 import ResponsiveNavLink from '@/Components/ResponsiveNavLink.vue';
+import ThemeSwitcher from '@/Components/ThemeSwitcher.vue';
 
 defineProps({
     title: String,
@@ -55,21 +56,37 @@ const logout = () => {
                         </div>
 
                         <div class="hidden sm:flex sm:items-center sm:ml-6">
+                            <ThemeSwitcher />
+
                             <div class="ml-3 relative">
                                 <!-- Teams Dropdown -->
                                 <Dropdown v-if="$page.props.jetstream.hasTeamFeatures" align="right" width="60">
+                                    <template #trigger>
+                                    </template>
+
+                                    <template #content>
+                                    </template>
                                 </Dropdown>
                             </div>
 
                             <!-- Settings Dropdown -->
                             <div class="ml-3 relative">
                                 <Dropdown align="right" width="48">
+                                    <template #trigger>
+                                    </template>
+
+                                    <template #content>
+                                    </template>
                                 </Dropdown>
                             </div>
                         </div>
 
                         <!-- Hamburger -->
                         <div class="-mr-2 flex items-center sm:hidden">
+                            <div class="mr-2 sm:mr-0">
+                                <ThemeSwitcher />
+                            </div>
+
                             <button class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 dark:text-gray-500 hover:text-gray-500 dark:hover:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-900 focus:outline-none focus:bg-gray-100 dark:focus:bg-gray-900 focus:text-gray-500 dark:focus:text-gray-400 transition duration-150 ease-in-out" @click="showingNavigationDropdown = ! showingNavigationDropdown">
                                 <svg
                                     class="h-6 w-6"
