@@ -11,8 +11,7 @@
         "laravel/sanctum": "^3.2",
         "laravel/tinker": "^2.8",
         "nativephp/electron": "^0.1.0",
-        "orchestra/parser": "^8.0",
-        "ryangjchandler/laravel-uuid": "^2.0"
+        "orchestra/parser": "^8.0"
     },
     "require-dev": {
         "barryvdh/laravel-ide-helper": "^2.13",

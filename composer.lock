@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8874380dd544017e0ffbb815edfee181",
+    "content-hash": "cee17488a533da4e523fda706f4ae7c0",
     "packages": [
         {
             "name": "brick/math",
@@ -3335,77 +3335,6 @@
                 }
             ],
             "time": "2023-04-15T23:01:58+00:00"
-        },
-        {
-            "name": "ryangjchandler/laravel-uuid",
-            "version": "v2.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/ryangjchandler/laravel-uuid.git",
-                "reference": "bd97f4a736169f84df4fb5009729a7acabbcb8c7"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ryangjchandler/laravel-uuid/zipball/bd97f4a736169f84df4fb5009729a7acabbcb8c7",
-                "reference": "bd97f4a736169f84df4fb5009729a7acabbcb8c7",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/contracts": "^10.0",
-                "php": "^8.0",
-                "spatie/laravel-package-tools": "^1.11.0"
-            },
-            "require-dev": {
-                "brianium/paratest": "^6.2",
-                "nunomaduro/collision": "^6.0",
-                "orchestra/testbench": "^8.0",
-                "phpunit/phpunit": "^9.3",
-                "spatie/laravel-ray": "^1.23"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "RyanChandler\\Uuid\\UuidServiceProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "RyanChandler\\Uuid\\": "src",
-                    "RyanChandler\\Uuid\\Database\\Factories\\": "database/factories"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Ryan Chandler",
-                    "email": "support@ryangjchandler.co.uk",
-                    "role": "Developer"
-                }
-            ],
-            "description": "A small package for adding UUIDs to Eloquent models.",
-            "homepage": "https://github.com/ryangjchandler/laravel-uuid",
-            "keywords": [
-                "laravel",
-                "laravel-uuid",
-                "ryangjchandler"
-            ],
-            "support": {
-                "issues": "https://github.com/ryangjchandler/laravel-uuid/issues",
-                "source": "https://github.com/ryangjchandler/laravel-uuid/tree/v2.0.0"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/ryangjchandler",
-                    "type": "github"
-                }
-            ],
-            "abandoned": true,
-            "time": "2023-02-15T13:42:51+00:00"
         },
         {
             "name": "spatie/laravel-package-tools",

@@ -15,8 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('url')->unique();
-            $table->timestamp('build_at')->nullable();
-            $table->timestamp('last_processed_at')->nullable();
+            $table->dateTime('built_at')->nullable();
+            $table->dateTime('last_processed_at')->nullable();
             $table->timestamps();
         });
     }

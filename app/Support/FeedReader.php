@@ -34,8 +34,8 @@ class FeedReader
 
     public function updated(): Carbon
     {
-        $results = $this->document->parse([
-            'updated' => ['uses' => 'channel.lastBuildDate'],
+        $results = $this->document->rebase('channel')->parse([
+            'updated' => ['uses' => 'lastBuildDate'],
         ]);
 
         return Carbon::parse($results['updated']);
@@ -45,7 +45,7 @@ class FeedReader
     {
         $items = $this->document->rebase('channel')->parse([
             'items' => [
-                'uses' => 'item[title,link,pubDate>updated,category,guid,description]',
+                'uses' => 'item[guid,title,link>url,pubDate>published_at,category,description]',
             ]
         ]);
 
@@ -69,7 +69,7 @@ class FeedReader
 
         return collect($items['items'])->map(fn (array $entry) => new FeedEntry(...[
             ...$entry,
-            'updated' => Carbon::parse($entry['updated']),
+            'published_at' => Carbon::parse($entry['published_at']),
         ]));
     }
 
