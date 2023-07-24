@@ -41,7 +41,12 @@ class Feed extends Model
             ], [
                 'title' => Str::of($entry->title)->trim(),
                 'url' => Str::of($entry->url)->trim(),
+                'location' => Str::of($entry->location)->trim(),
+                'job_type' => Str::of($entry->job_type)->trim(),
+                'salary' => Str::of($entry->salary)->trim(),
                 'company' => Str::of($entry->company)->trim(),
+                'company_logo' => Str::of($entry->company_logo)->trim(),
+                'tags' => Str::of($entry->tags)->trim(),
                 'published_at' => $entry->published_at,
                 'category' => Str::of($entry->category)->trim(),
                 'description' => Str::of($entry->description)->trim(),

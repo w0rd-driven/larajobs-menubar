@@ -17,7 +17,12 @@ return new class extends Migration
             $table->string('guid')->unique();
             $table->string('title');
             $table->string('url');
+            $table->string('location');
+            $table->string('job_type');
+            $table->string('salary')->nullable();
             $table->string('company');
+            $table->string('company_logo');
+            $table->string('tags')->nullable();
             $table->dateTime('published_at');
             $table->string('category')->nullable();
             $table->text('description')->nullable();

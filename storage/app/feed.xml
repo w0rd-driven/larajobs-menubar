@@ -6,6 +6,7 @@
      xmlns:atom="http://www.w3.org/2005/Atom"
      xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
      xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+     xmlns:job="https://larajobs.com"
 >
 
     <channel>
@@ -24,6 +25,12 @@
                 <pubDate>Sun, 23 Jul 2023 15:54:22 +0000</pubDate>
                 <dc:creator><![CDATA[Accurate Biometrics]]></dc:creator>
                 <category><![CDATA[Job]]></category>
+                <job:location><![CDATA[Itasca, IL/Remote]]></job:location>
+                <job:job_type><![CDATA[FULL_TIME]]></job:job_type>
+                <job:salary><![CDATA[$95,000-$115,000]]></job:salary>
+                <job:company><![CDATA[Accurate Biometrics]]></job:company>
+                <job:company_logo>https://larajobs.com/logos/uVd76pQhPLdeV6ULSa0vr9lsNRBl8Ulhqqo38Yy4.gif</job:company_logo>
+                <job:tags><![CDATA[Laravel]]></job:tags>
                 <guid isPermaLink="false">https://larajobs.com/job/3087</guid>
                 <description><![CDATA[
 
@@ -38,6 +45,12 @@
                 <pubDate>Sun, 23 Jul 2023 13:53:31 +0000</pubDate>
                 <dc:creator><![CDATA[Cloudmazing B.V.]]></dc:creator>
                 <category><![CDATA[Job]]></category>
+                <job:location><![CDATA[Goor / Netherlands]]></job:location>
+                <job:job_type><![CDATA[FULL_TIME]]></job:job_type>
+                <job:salary><![CDATA[]]></job:salary>
+                <job:company><![CDATA[Cloudmazing B.V.]]></job:company>
+                <job:company_logo>https://larajobs.com/logos/P5ysZgb7J2xNiwuGzaEZMR1y9kGF54V6GR3lINvn.png</job:company_logo>
+                <job:tags><![CDATA[]]></job:tags>
                 <guid isPermaLink="false">https://larajobs.com/job/3091</guid>
                 <description><![CDATA[
 
@@ -52,6 +65,12 @@
                 <pubDate>Sun, 23 Jul 2023 05:53:00 +0000</pubDate>
                 <dc:creator><![CDATA[Blockovate ]]></dc:creator>
                 <category><![CDATA[Job]]></category>
+                <job:location><![CDATA[London (Hybird)]]></job:location>
+                <job:job_type><![CDATA[FULL_TIME]]></job:job_type>
+                <job:salary><![CDATA[]]></job:salary>
+                <job:company><![CDATA[Blockovate ]]></job:company>
+                <job:company_logo>https://larajobs.com/logos/</job:company_logo>
+                <job:tags><![CDATA[]]></job:tags>
                 <guid isPermaLink="false">https://larajobs.com/job/3092</guid>
                 <description><![CDATA[
 
@@ -66,6 +85,12 @@
                 <pubDate>Sat, 22 Jul 2023 14:56:41 +0000</pubDate>
                 <dc:creator><![CDATA[By the Pixel]]></dc:creator>
                 <category><![CDATA[Job]]></category>
+                <job:location><![CDATA[Remote / World]]></job:location>
+                <job:job_type><![CDATA[FULL_TIME]]></job:job_type>
+                <job:salary><![CDATA[$30 - $45 USD per hour]]></job:salary>
+                <job:company><![CDATA[By the Pixel]]></job:company>
+                <job:company_logo>https://larajobs.com/logos/lFWXDMpvDrfDxdxWUn7HLTfvahc7WTufb6yxXHNn.png</job:company_logo>
+                <job:tags><![CDATA[Contract,Engineer,Laravel,Livewire,VueJS]]></job:tags>
                 <guid isPermaLink="false">https://larajobs.com/job/3090</guid>
                 <description><![CDATA[
 
@@ -80,6 +105,12 @@
                 <pubDate>Sat, 22 Jul 2023 04:53:20 +0000</pubDate>
                 <dc:creator><![CDATA[Buckhill Software]]></dc:creator>
                 <category><![CDATA[Job]]></category>
+                <job:location><![CDATA[Remote (CET +/- 3 hours)]]></job:location>
+                <job:job_type><![CDATA[FULL_TIME]]></job:job_type>
+                <job:salary><![CDATA[€ 29,460.00 -  € 73,236.00 (Gross 2, annual)]]></job:salary>
+                <job:company><![CDATA[Buckhill Software]]></job:company>
+                <job:company_logo>https://larajobs.com/logos/yk0PSc4fcsYJPamg7JoI3QZfKY7B7d8GcczAQ1aj.jpg</job:company_logo>
+                <job:tags><![CDATA[Backend,Fullstack,Laravel,SaaS,VueJS]]></job:tags>
                 <guid isPermaLink="false">https://larajobs.com/job/3089</guid>
                 <description><![CDATA[
 
@@ -94,6 +125,12 @@
                 <pubDate>Tue, 18 Jul 2023 18:46:54 +0000</pubDate>
                 <dc:creator><![CDATA[TurboPass Corporation]]></dc:creator>
                 <category><![CDATA[Job]]></category>
+                <job:location><![CDATA[Remote/USA]]></job:location>
+                <job:job_type><![CDATA[FULL_TIME]]></job:job_type>
+                <job:salary><![CDATA[$100,000-$120,000]]></job:salary>
+                <job:company><![CDATA[TurboPass Corporation]]></job:company>
+                <job:company_logo>https://larajobs.com/logos/qkLf9tSrbTYOSxY1M00I4TDho7q2Z7GZDm1UYl9t.jpg</job:company_logo>
+                <job:tags><![CDATA[]]></job:tags>
                 <guid isPermaLink="false">https://larajobs.com/job/3088</guid>
                 <description><![CDATA[
 
@@ -108,6 +145,12 @@
                 <pubDate>Mon, 17 Jul 2023 16:49:39 +0000</pubDate>
                 <dc:creator><![CDATA[Quote Velocity]]></dc:creator>
                 <category><![CDATA[Job]]></category>
+                <job:location><![CDATA[Remote / USA / UK]]></job:location>
+                <job:job_type><![CDATA[FULL_TIME]]></job:job_type>
+                <job:salary><![CDATA[]]></job:salary>
+                <job:company><![CDATA[Quote Velocity]]></job:company>
+                <job:company_logo>https://larajobs.com/logos/YNyNVUZQ6NQLGw8Aog1ThBWNxiIxpDItvn2mJ6Iz.png</job:company_logo>
+                <job:tags><![CDATA[AWS,Laravel,MySQL,PHP,VueJS]]></job:tags>
                 <guid isPermaLink="false">https://larajobs.com/job/3086</guid>
                 <description><![CDATA[
 
@@ -122,6 +165,12 @@
                 <pubDate>Mon, 17 Jul 2023 11:17:57 +0000</pubDate>
                 <dc:creator><![CDATA[Procuros]]></dc:creator>
                 <category><![CDATA[Job]]></category>
+                <job:location><![CDATA[Remote GMT+2 (+/- 2h)]]></job:location>
+                <job:job_type><![CDATA[FULL_TIME]]></job:job_type>
+                <job:salary><![CDATA[€65,000 — €80,000]]></job:salary>
+                <job:company><![CDATA[Procuros]]></job:company>
+                <job:company_logo>https://larajobs.com/logos/zLOkfi0vNB6SnRWCtEM0e9LNy5bf6jw28vjJq5Uj.png</job:company_logo>
+                <job:tags><![CDATA[API,AWS,Backend,Laravel,TailwindCSS]]></job:tags>
                 <guid isPermaLink="false">https://larajobs.com/job/3085</guid>
                 <description><![CDATA[
 
@@ -136,6 +185,12 @@
                 <pubDate>Thu, 13 Jul 2023 05:24:15 +0000</pubDate>
                 <dc:creator><![CDATA[Roomies]]></dc:creator>
                 <category><![CDATA[Job]]></category>
+                <job:location><![CDATA[Remote]]></job:location>
+                <job:job_type><![CDATA[FULL_TIME]]></job:job_type>
+                <job:salary><![CDATA[]]></job:salary>
+                <job:company><![CDATA[Roomies]]></job:company>
+                <job:company_logo>https://larajobs.com/logos/GoVzobP7chr6XMMDnmcwSuDf1sH0mFUPorlLEK9W.png</job:company_logo>
+                <job:tags><![CDATA[AlpineJS,Laravel,TailwindCSS]]></job:tags>
                 <guid isPermaLink="false">https://larajobs.com/job/3082</guid>
                 <description><![CDATA[
 
@@ -150,6 +205,12 @@
                 <pubDate>Thu, 13 Jul 2023 01:12:38 +0000</pubDate>
                 <dc:creator><![CDATA[CMS Max]]></dc:creator>
                 <category><![CDATA[Job]]></category>
+                <job:location><![CDATA[Remote]]></job:location>
+                <job:job_type><![CDATA[FULL_TIME]]></job:job_type>
+                <job:salary><![CDATA[]]></job:salary>
+                <job:company><![CDATA[CMS Max]]></job:company>
+                <job:company_logo>https://larajobs.com/logos/sgGkrsgl3LhGXqdrolh3kS5u0RhdhaK3MBf6hqMX.jpg</job:company_logo>
+                <job:tags><![CDATA[AlpineJS,AWS,Bootstrap,Laravel,Livewire]]></job:tags>
                 <guid isPermaLink="false">https://larajobs.com/job/3083</guid>
                 <description><![CDATA[
 

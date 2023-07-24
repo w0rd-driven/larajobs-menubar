@@ -55,16 +55,19 @@ class FeedReader
         //   on abstractions (SimpleXml). Guess when I'll fw XML in PHP again? When I'm dead if I could be so lucky.
         $companies = $this->document->rebase('channel')->parse([
             'items' => [
-                'uses' => 'item/dc[creator>company]',
+                'uses' => 'item/job[company,company_logo,location,job_type,salary,tags]',
             ]
         ]);
 
         // Merge the two arrays manually. I couldn't for the life of me find the function that lets me inject just the company.
         // The merge functions were supposed to do this but they crap out with the numerical portion
         //   "items" => 0-9 became -18 instead of injecting the keys.
+        $keys = ['company', 'company_logo', 'location', 'job_type', 'salary', 'tags'];
         for ($index = 0; $index < count($items['items']); $index++) {
-            $company = $companies['items'][$index]['company'];
-            $items['items'][$index]['company'] = $company;
+            foreach($keys as $key) {
+                $value = $companies['items'][$index][$key];
+                $items['items'][$index][$key] = $value;
+            }
         }
 
         return collect($items['items'])->map(fn (array $entry) => new FeedEntry(...[
