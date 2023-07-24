@@ -1,6 +1,6 @@
 <script setup>
-import AppLayout from '@/Layouts/AppLayout.vue';
-import JobList from '@/Components/Jobs/JobList.vue';
+import AppLayout from "@/Layouts/AppLayout.vue";
+import JobList from "@/Components/Jobs/JobList.vue";
 const props = defineProps({
     jobs: {
         type: Array,
@@ -12,14 +12,20 @@ const props = defineProps({
 <template>
     <AppLayout title="Jobs">
         <template #header>
-            <h2 class="font-semibold text-xl text-center text-gray-800 dark:text-gray-200 leading-tight">
-                Jobs
-            </h2>
+            <a
+                href="https://larajobs.com"
+                class=""
+            >
+                <span class="sr-only">LaraJobs</span>
+                <img src="https://larajobs.com/img/logo.svg" class="w-24" />
+            </a>
         </template>
 
         <div class="">
-            <div class="max-w-7xl mx-auto">
-                <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-xl sm:rounded-lg">
+            <div class="max-w-full mx-auto">
+                <div
+                    class="bg-white dark:bg-gray-800 overflow-y-scroll shadow-xl"
+                >
                     <JobList :jobs="jobs" listType="All" />
                 </div>
             </div>
