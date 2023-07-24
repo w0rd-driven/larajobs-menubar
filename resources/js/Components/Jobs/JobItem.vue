@@ -1,12 +1,11 @@
 <script setup>
+import { computed } from "vue";
 import { Link } from "@inertiajs/vue3";
 import PrimaryButton from "@/Components/PrimaryButton.vue";
-import {
-    SunIcon,
-    MoonIcon,
-    ComputerDesktopIcon,
-    BuildingOfficeIcon,
-} from "@heroicons/vue/20/solid";
+import { BuildingOfficeIcon, CalendarIcon } from "@heroicons/vue/20/solid";
+import dayjs from "dayjs";
+import relativeTime from "dayjs/plugin/relativeTime";
+dayjs.extend(relativeTime);
 
 const props = defineProps({
     listType: {
@@ -18,23 +17,47 @@ const props = defineProps({
         default: null,
     },
 });
+
+const publishedAt = computed(() =>
+    convertRelativeTime(dayjs(props.job.publishedAt).fromNow(true))
+);
+const companyLogo = computed(() => {
+    if (props.job.companyLogo != "https://larajobs.com/logos/") {
+        return props.job.companyLogo;
+    } else {
+        return "https://larajobs.com/img/nologo.svg";
+    }
+});
+const tags = computed(() =>
+    props.job.tags ? props.job.tags.split(",") : null
+);
+
+function titleCase(str) {
+    return str
+        .replace("_", " ")
+        .toLowerCase()
+        .split(" ")
+        .map(function (word) {
+            return word.charAt(0).toUpperCase() + word.slice(1);
+        })
+        .join(" ");
+}
+
+function convertRelativeTime(str) {
+    return str;
+}
 </script>
 
 <template>
-    <a
-        data-url="https://accuratebiometrics.com/"
-        href="/job/3087"
-        class="job-link group block mb-6 px-12"
-    >
+    <a :href="job.url" class="job-link group block mb-6 px-12">
         <div
             class="relative rounded border border-gray-200 px-2 md:px-6 py-5 shadow-sm flex items-center md:space-x-3 hover:border-gray-400 focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500"
-            style="min-height: 110px; background-color: "
         >
             <div
                 class="flex-shrink-0 mb-2 md:mb-0 md:absolute rounded-full md:p-4 md:bg-white md:shadow-lg md:-left-9"
             >
                 <img
-                    src="https://larajobs.com/logos/uVd76pQhPLdeV6ULSa0vr9lsNRBl8Ulhqqo38Yy4.gif"
+                    :src="companyLogo"
                     class="h-10 w-10 rounded object-contain"
                 />
             </div>
@@ -49,21 +72,24 @@ const props = defineProps({
                         class="text-sm text-gray-500 truncate"
                         style="color: #2d3748"
                     >
-                        Accurate Biometrics
+                        {{ job.company }}
                     </p>
                     <p
                         class="text-lg font-bold text-gray-900"
                         style="color: #2d3748"
                     >
-                        FULL STACK DEVELOPER
+                        {{ job.title }}
                     </p>
                     <p
                         class="text-sm text-gray-500 truncate"
                         style="color: #2d3748"
                     >
-                        Full Time
-                        <span class="text-gray-500" style="color: #2d3748"
-                            >- $95,000-$115,000</span
+                        {{ titleCase(job.jobType) }}
+                        <span
+                            v-if="job.salary"
+                            class="text-gray-500"
+                            style="color: #2d3748"
+                            >- {{ job.salary }}</span
                         >
                     </p>
                 </div>
@@ -88,9 +114,9 @@ const props = defineProps({
                                     clip-rule="evenodd"
                                 ></path>
                             </svg>
-                            Itasca, IL/Remote
+                            {{ job.location }}
                         </div>
-                        <div class="flex items-center" style="color: #2d3748">
+                        <div class="flex items-center">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 class="flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400"
@@ -105,17 +131,18 @@ const props = defineProps({
                                     d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
                                 ></path>
                             </svg>
-                            1d
+                            {{ publishedAt }}
                         </div>
                     </div>
                     <div
                         class="flex flex-wrap gap-1 md:gap-2 md:justify-end mt-2"
                     >
                         <div
+                            v-for="tag in tags"
                             class="text-sm border text-gray-700 border-gray-400 px-1 py-0 md:px-2 rounded self-center whitespace-no-wrap"
                             style="color: #2d3748"
                         >
-                            Laravel
+                            {{ tag }}
                         </div>
                     </div>
                 </div>

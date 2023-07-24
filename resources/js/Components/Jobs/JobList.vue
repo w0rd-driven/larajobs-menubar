@@ -8,14 +8,13 @@ const props = defineProps({
     },
     jobs: {
         type: Array,
-        default: [1, 2, 3, 4, 5],
+        default: [],
     },
 });
-
 </script>
 
 <template>
     <div>
-        <JobItem v-for="job in jobs" :listType="listType" />
+        <JobItem v-for="job in jobs" :listType="listType" :job="job" />
     </div>
 </template>

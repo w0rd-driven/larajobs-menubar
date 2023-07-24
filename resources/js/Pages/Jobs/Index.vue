@@ -1,6 +1,12 @@
 <script setup>
 import AppLayout from '@/Layouts/AppLayout.vue';
 import JobList from '@/Components/Jobs/JobList.vue';
+const props = defineProps({
+    jobs: {
+        type: Array,
+        default: [],
+    },
+});
 </script>
 
 <template>
@@ -14,7 +20,7 @@ import JobList from '@/Components/Jobs/JobList.vue';
         <div class="">
             <div class="max-w-7xl mx-auto">
                 <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-xl sm:rounded-lg">
-                    <JobList :listType="All" />
+                    <JobList :jobs="jobs" listType="All" />
                 </div>
             </div>
         </div>
