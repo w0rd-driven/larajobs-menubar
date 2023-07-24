@@ -36,7 +36,7 @@ const logout = () => {
 
         <div class="min-h-screen">
             <!-- Page Heading -->
-            <header v-if="$slots.header" class="bg-white dark:bg-gray-800 shadow sticky top-0">
+            <header v-if="$slots.header" class="bg-white dark:bg-gray-800 shadow sticky top-0 z-50">
                 <div class="max-w-full mx-auto py-4 px-4 sm:px-6 lg:px-8 flex">
                     <slot name="header" />
                     <ThemeSwitcher class="ml-auto" />

@@ -49,12 +49,12 @@ function convertRelativeTime(str) {
 </script>
 
 <template>
-    <a :href="job.url" class="job-link group block mb-6 px-12">
+    <a :href="job.url" class="job-link group block mb-6 px-6 sm:px-12 rounded-lg">
         <div
             class="relative rounded border border-gray-200 px-2 md:px-6 py-5 shadow-sm flex items-center md:space-x-3 hover:border-gray-400 focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500"
         >
             <div
-                class="flex-shrink-0 mb-2 md:mb-0 md:absolute rounded-full md:p-4 md:bg-white md:shadow-lg md:-left-9"
+                class="flex-shrink-0 mb-2 md:mb-0 md:absolute rounded-full md:p-4 md:bg-white md:shadow-lg md:-left-9 z-0"
             >
                 <img
                     :src="companyLogo"
@@ -65,42 +65,35 @@ function convertRelativeTime(str) {
             <div class="flex flex-col md:flex-row w-full">
                 <div
                     class="flex-1 min-w-0 px-2 md:pl-6 mb-2 md:mb-0 w-full"
-                    style="color: #2d3748"
                 >
                     <span class="absolute inset-0" aria-hidden="true"></span>
                     <p
                         class="text-sm text-gray-500 truncate"
-                        style="color: #2d3748"
                     >
                         {{ job.company }}
                     </p>
                     <p
                         class="text-lg font-bold text-gray-900"
-                        style="color: #2d3748"
                     >
                         {{ job.title }}
                     </p>
                     <p
                         class="text-sm text-gray-500 truncate"
-                        style="color: #2d3748"
                     >
                         {{ titleCase(job.jobType) }}
                         <span
                             v-if="job.salary"
                             class="text-gray-500"
-                            style="color: #2d3748"
                             >- {{ job.salary }}</span
                         >
                     </p>
                 </div>
                 <div
                     class="flex-none md:flex flex-col md:justify-end text-sm text-gray-500 px-2"
-                    style="color: #2d3748"
                 >
                     <div class="flex-none md:flex sm:justify-end">
                         <div
                             class="flex items-center mr-4 mb-1 md:mb-0 text-sm text-gray-500 truncate"
-                            style="color: #2d3748"
                         >
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -140,7 +133,6 @@ function convertRelativeTime(str) {
                         <div
                             v-for="tag in tags"
                             class="text-sm border text-gray-700 border-gray-400 px-1 py-0 md:px-2 rounded self-center whitespace-no-wrap"
-                            style="color: #2d3748"
                         >
                             {{ tag }}
                         </div>

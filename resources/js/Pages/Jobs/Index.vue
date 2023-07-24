@@ -21,10 +21,10 @@ const props = defineProps({
             </a>
         </template>
 
-        <div class="">
+        <div class="pt-6 bg-white dark:bg-gray-800">
             <div class="max-w-full mx-auto">
                 <div
-                    class="bg-white dark:bg-gray-800 overflow-y-scroll shadow-xl"
+                    class="overflow-y-scroll shadow-xl"
                 >
                     <JobList :jobs="jobs" listType="All" />
                 </div>
