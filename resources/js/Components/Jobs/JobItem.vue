@@ -45,7 +45,7 @@ const companyLogo = computed(() => {
     if (props.job.companyLogo != "https://larajobs.com/logos/") {
         return props.job.companyLogo;
     } else {
-        return "https://larajobs.com/img/nologo.svg";
+        return "/images/nologo.svg";
     }
 });
 const tags = computed(() =>

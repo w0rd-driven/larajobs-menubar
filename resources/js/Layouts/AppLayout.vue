@@ -8,6 +8,7 @@ import DropdownLink from '@/Components/DropdownLink.vue';
 import NavLink from '@/Components/NavLink.vue';
 import ResponsiveNavLink from '@/Components/ResponsiveNavLink.vue';
 import ThemeSwitcher from '@/Components/ThemeSwitcher.vue';
+import Refresh from '@/Components/Refresh.vue';
 
 defineProps({
     title: String,
@@ -40,6 +41,7 @@ const logout = () => {
                 <div class="max-w-full mx-auto py-4 px-4 sm:px-6 lg:px-8 flex">
                     <slot name="header" />
                     <ThemeSwitcher class="ml-auto" />
+                    <Refresh class="ml-2" />
                 </div>
             </header>
 

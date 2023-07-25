@@ -20,6 +20,9 @@ use Inertia\Inertia;
 Route::get('/', [JobsController::class, 'index'])
     ->name('jobs');
 
+Route::get('/jobs/refresh', [JobsController::class, 'refresh'])
+    ->name('jobs.refresh');
+
 Route::get('/settings', [SettingsController::class, 'index'])
     ->name('settings');
 

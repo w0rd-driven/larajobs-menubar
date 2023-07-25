@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\JobEntry;
+use App\Services\RefreshService;
 use Inertia\Inertia;
 
 class JobsController extends Controller
@@ -10,7 +11,7 @@ class JobsController extends Controller
     public function index()
     {
         return Inertia::render('Jobs/Index', [
-            'jobs' => JobEntry::all()->map(function ($jobEntry) {
+            'jobs' => JobEntry::latest()->take(10)->get()->map(function ($jobEntry) {
                 return [
                     'id' => $jobEntry->id,
                     'guid' => $jobEntry->guid,
@@ -28,5 +29,11 @@ class JobsController extends Controller
                 ];
             }),
         ]);
+    }
+
+    public function refresh()
+    {
+        $refresh = new RefreshService();
+        $refresh->refresh();
     }
 }

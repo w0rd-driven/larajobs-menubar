@@ -17,7 +17,7 @@ const props = defineProps({
                 class=""
             >
                 <span class="sr-only">LaraJobs</span>
-                <img src="https://larajobs.com/img/logo.svg" class="w-24" />
+                <img src="/images/larajobs.svg" class="w-24" />
             </a>
         </template>
 
