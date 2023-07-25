@@ -54,6 +54,7 @@ the long term goal of this project is to help curate and track applications over
 ## Shortcomings
 
 * NativePHP is currently alpha so everything will change.
+* Links aren't opened externally so resizing windows to apply will be difficult. Electron has a shell but I had issues with using the `import` syntax.
 * It's damn near difficult to prune the internal SQLite database as it's stored in a common location that does not reset if you clear /vendor.
     * You can do clever tricks like call `Artisan::call('migrate:fresh')` though.
 * Had issues with `OpenedFromURL` event as it just opened an arbitrary Electron window. I probably held it wrong.
