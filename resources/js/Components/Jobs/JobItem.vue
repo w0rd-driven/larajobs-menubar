@@ -5,7 +5,27 @@ import PrimaryButton from "@/Components/PrimaryButton.vue";
 import { BuildingOfficeIcon, CalendarIcon } from "@heroicons/vue/20/solid";
 import dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime";
+import updateLocale from "dayjs/plugin/updateLocale";
 dayjs.extend(relativeTime);
+dayjs.extend(updateLocale);
+
+dayjs.updateLocale("en", {
+    relativeTime: {
+        future: "in %s",
+        past: "%s ago",
+        s: "a few seconds",
+        m: "a minute",
+        mm: "%d minutes",
+        h: "1h",
+        hh: "%dh",
+        d: "1d",
+        dd: "%dd",
+        M: "1m",
+        MM: "%dm",
+        y: "1y",
+        yy: "%dy",
+    },
+});
 
 const props = defineProps({
     listType: {
@@ -49,7 +69,10 @@ function convertRelativeTime(str) {
 </script>
 
 <template>
-    <a :href="job.url" class="job-link group block mb-6 px-6 sm:px-12 rounded-lg">
+    <a
+        :href="job.url"
+        class="job-link group block mb-6 px-6 sm:px-12 rounded-lg"
+    >
         <div
             class="relative rounded border border-gray-200 px-2 md:px-6 py-5 shadow-sm flex items-center md:space-x-3 hover:border-gray-400 focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500"
         >
@@ -63,27 +86,17 @@ function convertRelativeTime(str) {
             </div>
 
             <div class="flex flex-col md:flex-row w-full">
-                <div
-                    class="flex-1 min-w-0 px-2 md:pl-6 mb-2 md:mb-0 w-full"
-                >
+                <div class="flex-1 min-w-0 px-2 md:pl-6 mb-2 md:mb-0 w-full">
                     <span class="absolute inset-0" aria-hidden="true"></span>
-                    <p
-                        class="text-sm text-gray-500 truncate"
-                    >
+                    <p class="text-sm text-gray-500 truncate">
                         {{ job.company }}
                     </p>
-                    <p
-                        class="text-lg font-bold text-gray-900"
-                    >
+                    <p class="text-lg font-bold text-gray-900">
                         {{ job.title }}
                     </p>
-                    <p
-                        class="text-sm text-gray-500 truncate"
-                    >
+                    <p class="text-sm text-gray-500 truncate">
                         {{ titleCase(job.jobType) }}
-                        <span
-                            v-if="job.salary"
-                            class="text-gray-500"
+                        <span v-if="job.salary" class="text-gray-500"
                             >- {{ job.salary }}</span
                         >
                     </p>
