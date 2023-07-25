@@ -1,5 +1,5 @@
 <script setup>
-import { ArrowPathIcon } from "@heroicons/vue/20/solid";
+import { ArrowPathRoundedSquareIcon } from "@heroicons/vue/20/solid";
 import { Link } from "@inertiajs/vue3";
 </script>
 
@@ -8,6 +8,6 @@ import { Link } from "@inertiajs/vue3";
         :href="route('jobs.refresh')"
         class="h-6 w-6"
     >
-        <ArrowPathIcon />
+        <ArrowPathRoundedSquareIcon />
     </Link>
 </template>
