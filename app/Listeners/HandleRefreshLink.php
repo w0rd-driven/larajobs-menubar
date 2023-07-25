@@ -22,8 +22,8 @@ class HandleRefreshLink
     public function handle(OpenedFromURL $event): void
     {
         if ($event->url === config('nativephp.deeplink_scheme') . '://refresh') {
-            $refresh = new RefreshService();
-            $refresh->refresh();
+            $feed = new RefreshService();
+            $feed->refresh();
         }
     }
 }

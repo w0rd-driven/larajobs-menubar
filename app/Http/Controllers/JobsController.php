@@ -33,7 +33,7 @@ class JobsController extends Controller
 
     public function refresh()
     {
-        $refresh = new RefreshService();
-        $refresh->refresh();
+        $feed = new RefreshService();
+        $feed->refresh();
     }
 }
